@@ -1,0 +1,172 @@
+.home-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(234, 200, 104, 0.16), transparent 28%),
+    linear-gradient(180deg, #090b1a 0%, #12153c 46%, #0e1031 100%);
+  color: #f8f7f2;
+}
+
+.home-hero {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.hero-panel,
+.friends-panel,
+.profile-summary {
+  background: rgba(15, 18, 41, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.page-title {
+  color: #f3d45f;
+  letter-spacing: 0.38em;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
+  letter-spacing: 0.05em;
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.action-btn {
+  border-radius: 1.1rem;
+  padding: 1.1rem 1.3rem;
+  font-weight: 600;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.action-btn:hover,
+.invite-btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-gold {
+  background: linear-gradient(90deg, #dac555, #f8dea3);
+  color: #1f1c11;
+  border: none;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8f7f2;
+}
+
+.primary-action {
+  min-height: 3.9rem;
+}
+
+.friends-title {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.friends-subtitle {
+  color: #c7c8d8;
+  font-size: 0.95rem;
+}
+
+.friend-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  padding: 1.15rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.friend-unavailable {
+  opacity: 0.72;
+}
+
+.friend-info {
+  flex: 1 1 auto;
+}
+
+.friend-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, rgba(242, 214, 110, 0.25), transparent 40%), rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f7e5a6;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.friend-name {
+  color: #f8f7f2;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.friend-meta {
+  font-size: 0.9rem;
+}
+
+.status-online {
+  color: #5ad96d;
+}
+
+.status-game {
+  color: #f4c646;
+}
+
+.status-offline {
+  color: #8f97af;
+}
+
+.invite-btn {
+  min-width: 110px;
+  font-weight: 700;
+}
+
+.loading-placeholder {
+  color: #c7c8d8;
+  font-size: 0.95rem;
+}
+
+.stat-value {
+  color: #f2d750;
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.stat-label {
+  color: #c7c8d8;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer-note {
+  color: #8f97af;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 767px) {
+  .hero-panel,
+  .friends-panel,
+  .profile-summary {
+    padding: 1.8rem !important;
+  }
+
+  .footer-note {
+    text-align: center;
+  }
+}

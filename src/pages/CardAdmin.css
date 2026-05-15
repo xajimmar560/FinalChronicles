@@ -1,0 +1,107 @@
+.card-admin-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(243,212,95,0.14), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(255,255,255,0.1), transparent 25%),
+    #07121f;
+  padding: 3rem 1rem;
+}
+
+.admin-panel {
+  max-width: 960px;
+  margin: 0 auto;
+  background: rgba(16, 24, 40, 0.95);
+  border: 1px solid rgba(243, 212, 95, 0.18);
+}
+
+.page-title {
+  font-size: 1.5rem;
+  letter-spacing: 0.14em;
+  color: #f3d45f;
+  margin: 0;
+}
+
+.card-form label {
+  color: #f8f9fa;
+}
+
+.card-preview-row {
+  margin-top: 1rem;
+}
+
+.image-picker {
+  padding: 0.5rem 0;
+}
+
+.image-option {
+  display: inline-flex;
+  border: 1px solid rgba(243, 212, 95, 0.12);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  width: 72px;
+  height: 72px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-option img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-option.selected {
+  border-color: #f3d45f;
+  box-shadow: 0 0 0 2px rgba(243, 212, 95, 0.22);
+}
+
+.card-preview {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(243, 212, 95, 0.15);
+}
+
+.card-preview img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-radius: 1rem;
+  background: rgba(255,255,255,0.05);
+}
+
+.card-preview-meta strong {
+  display: block;
+  color: #f8f9fa;
+  font-size: 1.1rem;
+}
+
+.card-preview-meta small {
+  color: #d1d5db;
+}
+
+.btn-gold {
+  background-color: #d1a22a;
+  border-color: #c29623;
+  color: #0b1220;
+}
+
+.btn-gold:hover,
+.btn-gold:focus {
+  background-color: #f3d45f;
+  color: #0b1220;
+}
+
+@media (max-width: 768px) {
+  .card-preview {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-preview img {
+    margin: 0 auto;
+  }
+}

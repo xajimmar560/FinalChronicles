@@ -1,0 +1,250 @@
+.deck-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(234, 200, 104, 0.16), transparent 28%),
+    linear-gradient(180deg, #090b1a 0%, #12153c 46%, #0e1031 100%);
+  color: #f8f7f2;
+}
+
+.deck-header {
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+}
+
+.deck-label {
+  color: #f3d45f;
+  letter-spacing: 0.38em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.deck-title {
+  font-size: clamp(2rem, 3vw, 3.25rem);
+  margin-bottom: 0.75rem;
+  line-height: 1.05;
+}
+
+.deck-subtitle {
+  color: #c7c8d8;
+  max-width: 620px;
+}
+
+.deck-panel {
+  background: rgba(15, 18, 41, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+}
+
+.collection-filter-row .form-control,
+.collection-filter-row .form-select {
+  background: rgba(20, 24, 47, 0.88);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #f8f7f2;
+}
+.collection-filter-row .form-control option,
+.collection-filter-row .form-select option {
+  background: #151a33;
+  color: #f8f7f2;
+}
+
+.collection-filter-row .form-control:focus,
+.collection-filter-row .form-select:focus {
+  border-color: rgba(243, 212, 94, 0.45);
+  box-shadow: 0 0 0 0.2rem rgba(243, 212, 94, 0.15);
+}
+
+.deck-stats {
+  gap: 1rem;
+}
+
+.deck-stat-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.4rem;
+  padding: 1.2rem;
+}
+
+.deck-stat-card .stat-label {
+  color: #c7c8d8;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.35rem;
+}
+
+.deck-stat-card .stat-value {
+  color: #f2d750;
+  font-size: 1.9rem;
+  font-weight: 800;
+}
+
+.deck-panel-title {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.deck-panel-subtitle {
+  color: #c7c8d8;
+  font-size: 0.95rem;
+}
+
+.card-grid {
+  margin-top: 0.5rem;
+}
+
+.deck-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.7rem;
+}
+
+.deck-card .card-body {
+  padding: 1.35rem;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.card-cost {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(243, 212, 94, 0.18);
+  color: #f3d45f;
+  font-weight: 800;
+}
+
+.card-type {
+  color: #c7c8d8;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card-title {
+  color: #ffffff;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 160px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1.35rem;
+  padding: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.card-image {
+  max-height: 130px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.card-text {
+  color: #d4d6e2;
+  font-size: 0.92rem;
+  min-height: 2.5rem;
+}
+
+.card-stats {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-pill {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8f7f2;
+  padding: 0.4rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+}
+
+.selected-count {
+  margin-top: 0.75rem;
+  color: #f8f7f2;
+  font-size: 0.9rem;
+}
+
+.deck-sidebar {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.deck-list {
+  min-height: 320px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 0.3rem;
+}
+
+.deck-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.2rem;
+  padding: 1rem 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.deck-item-title {
+  color: #f8f7f2;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.deck-item-meta {
+  color: #c7c8d8;
+  font-size: 0.9rem;
+}
+
+.deck-footer {
+  margin-top: auto;
+}
+
+.empty-prompt {
+  color: #c7c8d8;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.preset-panel {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.preset-item {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-gold {
+  background: linear-gradient(90deg, #dac555, #f8dea3);
+  color: #1f1c11;
+  border: none;
+}
+
+.badge.bg-gold {
+  background: linear-gradient(90deg, #dac555, #f8dea3);
+  color: #1f1c11;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+}
+
+@media (max-width: 767px) {
+  .deck-panel,
+  .deck-sidebar,
+  .deck-stat-card {
+    padding: 1.5rem !important;
+  }
+}
