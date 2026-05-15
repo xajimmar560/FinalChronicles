@@ -96,12 +96,7 @@ Ejemplo mínimo del body al crear un preset:
   "cardIds": [12, 12, 7, 3, 3, 3]
 }
 ```
-
-Notas sobre `dist/` y despliegue
 --------------------------------
-
-- `dist/` es el artefacto de build del frontend. Para AWS es habitual generar el build (`npm run build`) y luego desplegar el contenido de `dist/` en el servicio elegido (S3 + CloudFront, Elastic Beanstalk, ECS, etc.).
-- En este proyecto puedes optar por subir `dist/` al repo (útil para despliegues simples) o ignorarlo y usar CI/CD para construir en el servidor. Si subes `dist/`, recuerda mantenerlo sincronizado con el último `npm run build`.
 
 Scripts útiles
 --------------
