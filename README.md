@@ -67,7 +67,7 @@ Base de datos
 mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS PROYECTO CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;"
 ```
 
-- Nota: al iniciar `npm run server` el backend ejecuta migraciones ligeras: crea las tablas básicas necesarias (`Usuario`, `Carta`, `CartaMazo`, `posee`, `Amigo`, `Mazo`) si no existen y añade la columna `idmazo_predefinido` en `CartaMazo` cuando corresponde. Aun así, para entornos de producción revisa y aplica políticas de backup antes de ejecutar migraciones automáticas.
+- Nota: al iniciar `npm run server` el backend ejecuta migraciones ligeras: crea las tablas básicas necesarias (`Usuario`, `Carta`, `CartaMazo`, `posee`, `Amigo`, `Mazo`) si no existen y añade la columna `idmazo_predefinido` en `CartaMazo` cuando corresponde.
 
 APIs principales
 ----------------
@@ -87,7 +87,7 @@ APIs principales
 Guardar presets desde frontend
 -----------------------------
 
-Ejemplo minimal del body al crear un preset:
+Ejemplo mínimo del body al crear un preset:
 
 ```json
 {
@@ -111,23 +111,3 @@ Scripts útiles
 - `npm run dev:full` — arranca frontend y backend (requiere `concurrently`)
 - `npm run build` — genera `dist/`
 
-Consejos para producción
-------------------------
-
-- No uses credenciales root en producción; crea un usuario de base de datos con permisos mínimos.
-- Haz backups regulares de la base de datos (`mysqldump`).
-- Considera controlar las migraciones con una herramienta dedicada (Flyway, Liquibase o migraciones SQL versionadas) en vez de migraciones automáticas en arranque.
-
-Eliminar scripts de diagnóstico
--------------------------------
-
-Si ya no necesitas `scripts/inspectDeckSchema.mjs`, es seguro eliminarlo; solo era una utilidad de inspección (no modifica tablas).
-
-Contribuir
----------
-
-Abre un issue o PR, mantiene ramas limpias y agrega commits claros. Gracias por contribuir.
-
-Licencia
---------
-MIT — revisa el repo para añadir archivo `LICENSE` si procede.
