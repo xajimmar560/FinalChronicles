@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import "./Auth.css";
 
@@ -92,9 +92,9 @@ export default function Login() {
           <div className="auth-footer">
             <p>
               ¿No tienes una cuenta?{" "}
-              <a href="/register" className="link">
+              <Link to="/register" className="link">
                 Regístrate aquí
-              </a>
+              </Link>
             </p>
           </div>
         </div>
