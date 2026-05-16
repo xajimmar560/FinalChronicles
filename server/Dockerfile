@@ -6,10 +6,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install --production
 
-# copy project files
-COPY . .
-
-WORKDIR /app/server
+# copy only backend source
+COPY server ./server
 
 EXPOSE 3001
 

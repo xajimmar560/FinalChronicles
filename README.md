@@ -120,6 +120,8 @@ docker compose up -d
 
 El frontend quedará disponible en `http://localhost:8080` y la API en `http://localhost:3001` (según `docker-compose.yml`).
 
+En el despliegue AWS, el frontend está configurado para apuntar a la API pública en `http://35.174.175.48:3001`.
+
 Para detener y limpiar:
 
 ```bash
