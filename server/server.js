@@ -4,9 +4,14 @@ import { Server } from "socket.io";
 import mysql from "mysql2/promise";
 import cors from "cors";
 import dotenv from "dotenv";
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
 
 // Cargar variables de entorno
 dotenv.config();
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const distPath = join(__dirname, "../dist");
 
 const app = express();
 const httpServer = createServer(app);
@@ -17,7 +22,7 @@ const io = new Server(httpServer, {
   },
 });
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // Configuracion de la conexion a MySQL
 const pool = mysql.createPool({
@@ -34,6 +39,7 @@ const pool = mysql.createPool({
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.static(distPath));
 
 const activeSockets = new Map();
 
@@ -1060,6 +1066,14 @@ app.post("/api/auth/login", async (req, res) => {
 // Health check
 app.get("/health", (req, res) => {
   res.json({ status: "ok", server: "Final Chronicles API" });
+});
+
+// Fallback para rutas de cliente en producción
+app.get("*", (req, res, next) => {
+  if (req.path.startsWith("/api") || req.path.startsWith("/socket.io") || req.path === "/health") {
+    return next();
+  }
+  res.sendFile(join(distPath, "index.html"));
 });
 
 // 404 para rutas no encontradas
