@@ -106,3 +106,27 @@ Scripts útiles
 - `npm run dev:full` — arranca frontend y backend (requiere `concurrently`)
 - `npm run build` — genera `dist/`
 
+Docker (opcional)
+-----------------
+
+Se incluye configuración de `Docker` y `docker-compose` para desarrollo local o despliegues sencillos.
+
+Construir y levantar (incluye MySQL):
+
+```bash
+docker compose build
+docker compose up -d
+```
+
+El frontend quedará disponible en `http://localhost:8080` y la API en `http://localhost:3001` (según `docker-compose.yml`).
+
+Para detener y limpiar:
+
+```bash
+docker compose down -v
+```
+
+Notas:
+- Los ficheros relevantes son `Dockerfile` (front), `server/Dockerfile` (API) y `docker-compose.yml`.
+- Reemplaza las credenciales de MySQL del compose por valores seguros en producción.
+
