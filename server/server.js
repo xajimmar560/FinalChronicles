@@ -261,10 +261,25 @@ async function ensureBaseTables() {
   connection.release();
 }
 
-pool.getConnection()
-  .then(async (conn) => {
-    console.log("Conexion a MySQL establecida correctamente");
-    conn.release();
+async function waitForDatabase(retries = 12, delayMs = 2500) {
+  for (let attempt = 1; attempt <= retries; attempt += 1) {
+    try {
+      const connection = await pool.getConnection();
+      connection.release();
+      return;
+    } catch (error) {
+      console.warn(`? Intento ${attempt}/${retries} para conectar con MySQL fallido: ${error.code || error.message}`);
+      if (attempt === retries) {
+        throw error;
+      }
+      await new Promise((resolve) => setTimeout(resolve, delayMs));
+    }
+  }
+}
+
+waitForDatabase()
+  .then(async () => {
+    console.log("? Conexion a MySQL establecida correctamente");
     await ensureBaseTables();
     await ensureRequestTable();
     await ensureCardInsertTrigger();
