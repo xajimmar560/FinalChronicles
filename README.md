@@ -19,7 +19,7 @@ Instalación rápida (desarrollo)
 1. Clona el repo y entra al directorio del proyecto:
 
 ```bash
-git clone <https://github.com/xajimmar560/FinalChronicles>
+git clone https://github.com/xajimmar560/FinalChronicles
 cd final_chronicles
 ```
 
