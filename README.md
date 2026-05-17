@@ -19,7 +19,7 @@ Instalación rápida (desarrollo)
 1. Clona el repo y entra al directorio del proyecto:
 
 ```bash
-git clone <tu-repo-url>
+git clone <https://github.com/xajimmar560/FinalChronicles>
 cd final_chronicles
 ```
 
@@ -84,18 +84,6 @@ APIs principales
   - body: `{ userId, nombremazo, cardIds: [id1, id2, ...] }`
 - GET `/api/users/:id/deck-presets/:presetId` — cargar preset
 
-Guardar presets desde frontend
------------------------------
-
-Ejemplo mínimo del body al crear un preset:
-
-```json
-{
-  "userId": 1,
-  "nombremazo": "Mi mazo",
-  "cardIds": [12, 12, 7, 3, 3, 3]
-}
-```
 --------------------------------
 
 Scripts útiles
@@ -125,7 +113,7 @@ En el despliegue AWS, el frontend está configurado para apuntar a la API públi
 Para detener y limpiar:
 
 ```bash
-docker compose down -v
+docker compose down
 ```
 
 Notas:
