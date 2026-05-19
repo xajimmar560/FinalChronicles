@@ -982,7 +982,7 @@ app.post("/api/auth/register", async (req, res) => {
 
     if (!username || !password) {
       console.warn("?? Registro: faltan credenciales");
-      return res.status(400).json({ error: "Usuario y contrasenya requeridos" });
+      return res.status(400).json({ error: "Usuario y contraseña requeridos" });
     }
 
     if (username.length < 3) {
@@ -990,7 +990,7 @@ app.post("/api/auth/register", async (req, res) => {
     }
 
     if (password.length < 6) {
-      return res.status(400).json({ error: "La contrase�a debe tener al menos 6 caracteres" });
+      return res.status(400).json({ error: "La contraseña debe tener al menos 6 caracteres" });
     }
 
     const connection = await pool.getConnection();
@@ -1074,7 +1074,7 @@ app.post("/api/auth/login", async (req, res) => {
     });
   } catch (error) {
     console.error("Error en POST /login:", error.message);
-    res.status(500).json({ error: "Error al iniciar sesi�n" });
+    res.status(500).json({ error: "Error al iniciar sesión" });
   }
 });
 
